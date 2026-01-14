@@ -3,6 +3,8 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "Montserrat", "Inter", "Roboto Condensed", sans-serif;
+  font-weight: 500;
 }
 
 .bg-colors {
@@ -11,6 +13,7 @@
   z-index: -1;
   top: 0;
   left: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -37,25 +40,30 @@
 
 header {
   width: 100%;
-  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #acd5de;
-  padding: 20px 40px;
+  padding: 30px 40px;
   font-size: 24px;
 }
 header a {
   color: #1a4e8d;
 }
+header .logo {
+  display: flex;
+  align-items: end;
+  color: #1a4e8d;
+}
 header nav {
   display: flex;
-  font-size: 20px;
-  gap: 30px;
+  font-size: 16px;
+  gap: 10px;
+  align-items: center;
 }
 header nav .defaultlink {
   border: none;
-  padding: 5px 15px;
+  padding: 10px 25px;
   border-radius: 40px;
   transition: 0.3s;
 }
@@ -64,6 +72,32 @@ header nav .defaultlink:hover {
   background-color: #1a4e8d;
   color: white;
 }
+header nav .loginlink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 header nav .loginlink:hover span {
   color: #6795b8;
+}
+header nav .bi {
+  font-size: 28px;
+}
+
+main {
+  width: 100%;
+}
+main .home-hero h1 {
+  font-size: 70px;
+  margin-top: 100px;
+  margin-left: 50px;
+  font-weight: 700;
+  color: #1a4e8d;
+}
+main .home-hero h3 {
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-left: 50px;
+  color: #1a4e8d;
 }/*# sourceMappingURL=style.css.map */
