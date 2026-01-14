@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.bg-colors {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+.bg-colors .first {
+  background-color: #acd5de;
+  height: 691px;
+}
+.bg-colors .second {
+  background-color: white;
+  height: 840px;
+}
+.bg-colors .third {
+  background-color: #acd5de;
+  height: 1000px;
+}
+.bg-colors .fourth {
+  background-color: #1a4e8d;
+  height: 843px;
+}
+.bg-colors .fifth {
+  background-color: white;
+  height: 288px;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #acd5de;
+  padding: 20px 40px;
+  font-size: 24px;
+}
+header a {
+  color: #1a4e8d;
+}
+header nav {
+  display: flex;
+  font-size: 20px;
+  gap: 30px;
+}
+header nav .defaultlink {
+  border: none;
+  padding: 5px 15px;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+header nav .defaultlink:hover {
+  border: 2px solid none;
+  background-color: #1a4e8d;
+  color: white;
+}
+header nav .loginlink:hover span {
+  color: #6795b8;
+}/*# sourceMappingURL=style.css.map */
