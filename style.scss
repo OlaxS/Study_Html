@@ -10,47 +10,13 @@ $text-color: #1a4e8d;
 	font-weight: 500;
 }
 
-// background colors
-
-.bg-colors {
-	width: 100%;
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-
-	display: flex;
-	flex-direction: column;
-	.first {
-		background-color: #acd5de;
-		height: 691px;
-	}
-	.second {
-		background-color: white;
-		height: 840px;
-	}
-	.third {
-		background-color: #acd5de;
-		height: 1000px;
-	}
-	.fourth {
-		background-color: #1a4e8d;
-		height: 843px;
-	}
-	.fifth {
-		background-color: white;
-		height: 288px;
-	}
-}
-
 // HEADER
 
 header {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: end;
 	background-color: $bg-color;
 	padding: 30px 40px;
 	font-size: 24px;
@@ -103,20 +69,229 @@ main {
 	width: 100%;
 
 	.home-hero {
-		h1 {
-			font-size: 70px;
-			margin-top: 100px;
-			margin-left: 50px;
-			font-weight: 700;
+		width: 100%;
+		height: 600px;
+		background-color: $bg-color;
+		position: relative;
+
+		h1,
+		h3 {
+			position: relative; // текст поверх картинки
+			z-index: 2;
 			color: $text-color;
 		}
+
+		h1 {
+			font-size: 80px;
+			padding-top: 75px;
+			padding-left: 50px;
+			font-weight: 700;
+		}
 		h3 {
-			font-size: 25px;
+			font-size: 23px;
 			font-weight: 400;
-			margin-top: 20px;
-			margin-left: 50px;
+			padding-top: 20px;
+			padding-left: 50px;
+		}
+
+		.hero-image {
+			position: absolute;
+			right: 0px;
+			bottom: -160px;
+			z-index: 1;
+		}
+	}
+
+	.book-section {
+		position: relative;
+		width: 100%;
+		height: 800px;
+		background-color: #f5f5f5;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 270px;
+
+		h2 {
+			font-size: 70px;
+			font-weight: 600;
 			color: $text-color;
+			text-align: center;
+			padding-top: 30px;
+		}
+
+		.text-container {
+			margin-top: 40px;
+			display: flex;
+			justify-content: center;
+			gap: 30px;
+
+			span {
+				display: flex;
+				align-items: center;
+				gap: 13px;
+				font-size: 18px;
+				color: $text-color;
+			}
+		}
+
+		.book-link {
+			margin-top: 50px;
+			display: flex;
+			width: 222px;
+			height: 44px;
+			background-color: $text-color;
+			color: white;
+			border-radius: 40px;
+			align-items: center;
+			justify-content: center;
+			transition: 0.4s;
+
+			&:hover {
+				background-color: #0f2d52;
+			}
+		}
+
+		.image-container {
+			margin-top: 50px;
+			padding: 0px 50px;
+			display: flex;
+			gap: 20px;
+
+			.image-border {
+				width: 400px;
+				height: 280px;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+
+			.book-images {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: 1.5s;
+
+				&:hover {
+					transform: scale(1.12);
+				}
+			}
+		}
+	}
+
+	.clients-section {
+		width: 100%;
+		height: 1000px;
+		background-color: $bg-color;
+
+		h2 {
+			font-size: 60px;
+			font-weight: 700;
+			color: $text-color;
+			text-align: center;
+			padding-top: 130px;
+		}
+
+		.client-cards {
+			display: flex;
+			justify-content: space-evenly;
+			margin: 100px 160px;
+
+			.client-card {
+				width: 300px;
+				height: 420px;
+				background-color: white;
+				border-radius: 15px;
+				display: flex;
+				flex-direction: column;
+				padding: 40px 30px;
+
+				.client-icon {
+					width: 90px;
+					height: 90px;
+					border-radius: 100%;
+					background-color: #d1f6ff;
+
+					.client-image {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				.client-review {
+					margin-top: 40px;
+					font-size: 20px;
+					font-weight: 400;
+					color: #3a71b5;
+					flex-grow: 1;
+				}
+
+				.client-name {
+					font-size: 17px;
+					font-weight: 800;
+					color: $text-color;
+				}
+			}
+			.second-client {
+				margin-top: 100px;
+			}
+			.third-client {
+				margin-top: 50px;
+			}
+		}
+	}
+
+	.customers-section {
+		width: 100%;
+		height: 843px;
+		background: #1a4e8d;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+
+		a {
+			color: $text-color;
+		}
+
+		h2 {
+			font-size: 65px;
+			font-weight: 700;
+			color: white;
+			text-align: center;
+			padding-top: 130px;
+		}
+
+		.follow {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: white;
+			width: 133px;
+			height: 44px;
+			border-radius: 30px;
+			transition: 0.4s;
+
+			&:hover {
+				background-color: $bg-color;
+			}
 		}
 	}
 }
-// END MAIN
+
+// ASIDE
+
+aside {
+	position: fixed;
+	bottom: 40px;
+	right: 30px;
+
+	.bot-chat {
+		background-color: #d1f6ff;
+		color: $text-color;
+		padding: 15px 50px;
+		border-radius: 10px;
+		font-size: 16px;
+		font-weight: 700;
+	}
+}

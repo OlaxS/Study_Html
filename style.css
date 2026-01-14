@@ -7,42 +7,11 @@
   font-weight: 500;
 }
 
-.bg-colors {
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.bg-colors .first {
-  background-color: #acd5de;
-  height: 691px;
-}
-.bg-colors .second {
-  background-color: white;
-  height: 840px;
-}
-.bg-colors .third {
-  background-color: #acd5de;
-  height: 1000px;
-}
-.bg-colors .fourth {
-  background-color: #1a4e8d;
-  height: 843px;
-}
-.bg-colors .fifth {
-  background-color: white;
-  height: 288px;
-}
-
 header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   background-color: #acd5de;
   padding: 30px 40px;
   font-size: 24px;
@@ -87,17 +56,201 @@ header nav .bi {
 main {
   width: 100%;
 }
-main .home-hero h1 {
-  font-size: 70px;
-  margin-top: 100px;
-  margin-left: 50px;
-  font-weight: 700;
+main .home-hero {
+  width: 100%;
+  height: 600px;
+  background-color: #acd5de;
+  position: relative;
+}
+main .home-hero h1,
+main .home-hero h3 {
+  position: relative;
+  z-index: 2;
   color: #1a4e8d;
 }
+main .home-hero h1 {
+  font-size: 80px;
+  padding-top: 75px;
+  padding-left: 50px;
+  font-weight: 700;
+}
 main .home-hero h3 {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 400;
-  margin-top: 20px;
-  margin-left: 50px;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+main .home-hero .hero-image {
+  position: absolute;
+  right: 0px;
+  bottom: -160px;
+  z-index: 1;
+}
+main .book-section {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 270px;
+}
+main .book-section h2 {
+  font-size: 70px;
+  font-weight: 600;
   color: #1a4e8d;
+  text-align: center;
+  padding-top: 30px;
+}
+main .book-section .text-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+main .book-section .text-container span {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 18px;
+  color: #1a4e8d;
+}
+main .book-section .book-link {
+  margin-top: 50px;
+  display: flex;
+  width: 222px;
+  height: 44px;
+  background-color: #1a4e8d;
+  color: white;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+main .book-section .book-link:hover {
+  background-color: #0f2d52;
+}
+main .book-section .image-container {
+  margin-top: 50px;
+  padding: 0px 50px;
+  display: flex;
+  gap: 20px;
+}
+main .book-section .image-container .image-border {
+  width: 400px;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main .book-section .image-container .book-images {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 1.5s;
+}
+main .book-section .image-container .book-images:hover {
+  transform: scale(1.12);
+}
+main .clients-section {
+  width: 100%;
+  height: 1000px;
+  background-color: #acd5de;
+}
+main .clients-section h2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #1a4e8d;
+  text-align: center;
+  padding-top: 130px;
+}
+main .clients-section .client-cards {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 100px 160px;
+}
+main .clients-section .client-cards .client-card {
+  width: 300px;
+  height: 420px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+}
+main .clients-section .client-cards .client-card .client-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  background-color: #d1f6ff;
+}
+main .clients-section .client-cards .client-card .client-icon .client-image {
+  width: 100%;
+  height: 100%;
+}
+main .clients-section .client-cards .client-card .client-review {
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #3a71b5;
+  flex-grow: 1;
+}
+main .clients-section .client-cards .client-card .client-name {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1a4e8d;
+}
+main .clients-section .client-cards .second-client {
+  margin-top: 100px;
+}
+main .clients-section .client-cards .third-client {
+  margin-top: 50px;
+}
+main .customers-section {
+  width: 100%;
+  height: 843px;
+  background: #1a4e8d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+main .customers-section a {
+  color: #1a4e8d;
+}
+main .customers-section h2 {
+  font-size: 65px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  padding-top: 130px;
+}
+main .customers-section .follow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 133px;
+  height: 44px;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+main .customers-section .follow:hover {
+  background-color: #acd5de;
+}
+
+aside {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+}
+aside .bot-chat {
+  background-color: #d1f6ff;
+  color: #1a4e8d;
+  padding: 15px 50px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
