@@ -1,5 +1,5 @@
 * {
-  padding: 0;
+  margin: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
@@ -15,6 +15,7 @@ header {
   background-color: #acd5de;
   padding: 30px 40px;
   font-size: 24px;
+  overflow: hidden;
 }
 header a {
   color: #1a4e8d;
@@ -58,7 +59,7 @@ main {
 }
 main .home-hero {
   width: 100%;
-  height: 600px;
+  padding: 0px 0px 220px 0px;
   background-color: #acd5de;
   position: relative;
 }
@@ -70,9 +71,10 @@ main .home-hero h3 {
 }
 main .home-hero h1 {
   font-size: 80px;
-  padding-top: 75px;
+  padding-top: 65px;
   padding-left: 50px;
   font-weight: 700;
+  line-height: 1.1;
 }
 main .home-hero h3 {
   font-size: 23px;
@@ -89,13 +91,11 @@ main .home-hero .hero-image {
 main .book-section {
   position: relative;
   width: 100%;
-  height: 800px;
-  background-color: #f5f5f5;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-top: 270px;
+  padding-top: 225px;
 }
 main .book-section h2 {
   font-size: 70px;
@@ -105,7 +105,7 @@ main .book-section h2 {
   padding-top: 30px;
 }
 main .book-section .text-container {
-  margin-top: 40px;
+  padding-top: 40px;
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -120,8 +120,8 @@ main .book-section .text-container span {
 main .book-section .book-link {
   margin-top: 50px;
   display: flex;
-  width: 222px;
   height: 44px;
+  width: 220px;
   background-color: #1a4e8d;
   color: white;
   border-radius: 40px;
@@ -133,14 +133,15 @@ main .book-section .book-link:hover {
   background-color: #0f2d52;
 }
 main .book-section .image-container {
-  margin-top: 50px;
-  padding: 0px 50px;
+  width: 100%;
+  padding: 50px 50px;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 10px;
 }
 main .book-section .image-container .image-border {
-  width: 400px;
-  height: 280px;
+  width: 380px;
+  height: 290px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -156,7 +157,7 @@ main .book-section .image-container .book-images:hover {
 }
 main .clients-section {
   width: 100%;
-  height: 1000px;
+  overflow: hidden;
   background-color: #acd5de;
 }
 main .clients-section h2 {
@@ -169,7 +170,7 @@ main .clients-section h2 {
 main .clients-section .client-cards {
   display: flex;
   justify-content: space-evenly;
-  margin: 100px 160px;
+  padding: 100px 160px;
 }
 main .clients-section .client-cards .client-card {
   width: 300px;
@@ -191,7 +192,7 @@ main .clients-section .client-cards .client-card .client-icon .client-image {
   height: 100%;
 }
 main .clients-section .client-cards .client-card .client-review {
-  margin-top: 40px;
+  padding-top: 40px;
   font-size: 20px;
   font-weight: 400;
   color: #3a71b5;
@@ -210,7 +211,7 @@ main .clients-section .client-cards .third-client {
 }
 main .customers-section {
   width: 100%;
-  height: 843px;
+  padding: 130px 0px;
   background: #1a4e8d;
   display: flex;
   flex-direction: column;
@@ -225,7 +226,6 @@ main .customers-section h2 {
   font-weight: 700;
   color: white;
   text-align: center;
-  padding-top: 130px;
 }
 main .customers-section .follow {
   display: flex;
@@ -241,14 +241,16 @@ main .customers-section .follow:hover {
   background-color: #acd5de;
 }
 main .customers-section .images-container {
+  width: 100%;
   display: flex;
+  padding: 20px 40px;
   justify-content: center;
   gap: 30px;
+  overflow: scroll;
 }
 main .customers-section .images-container .image-border {
   width: 292px;
   height: 292px;
-  overflow: hidden;
   position: relative;
 }
 main .customers-section .images-container .hover-text-container {
@@ -274,35 +276,40 @@ main .customers-section .images-container .image-border:hover .hover-text-contai
   opacity: 1;
 }
 main .customers-section .images-container .customer-image {
-  width: 100%;
-  height: 100%;
+  width: 292px;
+  height: 292px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 footer {
   width: 100%;
-  height: 200px;
   background-color: #f5f5f5;
-  padding: 30px 100px;
+  padding: 30px 60px;
   display: flex;
-  gap: 230px;
+  gap: 0px;
 }
 footer .logo {
+  width: 100%;
   font-size: 20px;
   color: #1a4e8d;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
 }
 footer .footer-container {
+  width: 100%;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   gap: 3px;
-  margin-top: 20px;
+  padding-top: 20px;
+  margin-right: 100px;
 }
 footer .footer-container h4 {
   font-size: 16px;
   font-weight: 700;
   color: #1a4e8d;
-  margin-bottom: 20px;
 }
 footer .footer-container p,
 footer .footer-container a {
@@ -322,5 +329,25 @@ aside .bot-chat {
   padding: 15px 50px;
   border-radius: 10px;
   font-size: 16px;
+  font-weight: 700;
+}
+
+.services-hero {
+  width: 100%;
+  background-color: #acd5de;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-top: 80px;
+}
+.services-hero p {
+  font-size: 20px;
+  color: #1a4e8d;
+}
+.services-hero h1 {
+  font-size: 60px;
+  color: #1a4e8d;
   font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

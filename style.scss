@@ -2,13 +2,15 @@ $bg-color: #acd5de;
 $text-color: #1a4e8d;
 
 * {
-	padding: 0;
+	margin: 0;
 	margin: 0;
 	box-sizing: border-box;
 	text-decoration: none;
 	font-family: 'Montserrat', 'Inter', 'Roboto Condensed', sans-serif;
 	font-weight: 500;
 }
+
+///////////////////////////////////////// INDEX
 
 // HEADER
 
@@ -20,6 +22,7 @@ header {
 	background-color: $bg-color;
 	padding: 30px 40px;
 	font-size: 24px;
+	overflow: hidden;
 
 	a {
 		color: $text-color;
@@ -70,7 +73,7 @@ main {
 
 	.home-hero {
 		width: 100%;
-		height: 600px;
+		padding: 0px 0px 220px 0px;
 		background-color: $bg-color;
 		position: relative;
 
@@ -83,9 +86,10 @@ main {
 
 		h1 {
 			font-size: 80px;
-			padding-top: 75px;
+			padding-top: 65px;
 			padding-left: 50px;
 			font-weight: 700;
+			line-height: 1.1;
 		}
 		h3 {
 			font-size: 23px;
@@ -105,13 +109,11 @@ main {
 	.book-section {
 		position: relative;
 		width: 100%;
-		height: 800px;
-		background-color: #f5f5f5;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-		margin-top: 270px;
+		padding-top: 225px;
 
 		h2 {
 			font-size: 70px;
@@ -122,7 +124,7 @@ main {
 		}
 
 		.text-container {
-			margin-top: 40px;
+			padding-top: 40px;
 			display: flex;
 			justify-content: center;
 			gap: 30px;
@@ -139,8 +141,8 @@ main {
 		.book-link {
 			margin-top: 50px;
 			display: flex;
-			width: 222px;
 			height: 44px;
+			width: 220px;
 			background-color: $text-color;
 			color: white;
 			border-radius: 40px;
@@ -154,14 +156,15 @@ main {
 		}
 
 		.image-container {
-			margin-top: 50px;
-			padding: 0px 50px;
+			width: 100%;
+			padding: 50px 50px;
 			display: flex;
-			gap: 20px;
+			justify-content: center;
+			gap: 10px;
 
 			.image-border {
-				width: 400px;
-				height: 280px;
+				width: 380px;
+				height: 290px;
 				border-radius: 10px;
 				overflow: hidden;
 			}
@@ -181,7 +184,7 @@ main {
 
 	.clients-section {
 		width: 100%;
-		height: 1000px;
+		overflow: hidden;
 		background-color: $bg-color;
 
 		h2 {
@@ -195,7 +198,7 @@ main {
 		.client-cards {
 			display: flex;
 			justify-content: space-evenly;
-			margin: 100px 160px;
+			padding: 100px 160px;
 
 			.client-card {
 				width: 300px;
@@ -219,7 +222,7 @@ main {
 				}
 
 				.client-review {
-					margin-top: 40px;
+					padding-top: 40px;
 					font-size: 20px;
 					font-weight: 400;
 					color: #3a71b5;
@@ -243,7 +246,7 @@ main {
 
 	.customers-section {
 		width: 100%;
-		height: 843px;
+		padding: 130px 0px;
 		background: #1a4e8d;
 		display: flex;
 		flex-direction: column;
@@ -259,7 +262,6 @@ main {
 			font-weight: 700;
 			color: white;
 			text-align: center;
-			padding-top: 130px;
 		}
 
 		.follow {
@@ -278,14 +280,16 @@ main {
 		}
 
 		.images-container {
+			width: 100%;
 			display: flex;
+			padding: 20px 40px;
 			justify-content: center;
 			gap: 30px;
+			overflow: scroll;
 
 			.image-border {
 				width: 292px;
 				height: 292px;
-				overflow: hidden;
 				position: relative;
 			}
 
@@ -315,8 +319,8 @@ main {
 			}
 
 			.customer-image {
-				width: 100%;
-				height: 100%;
+				width: 292px;
+				height: 292px;
 				object-fit: cover;
 			}
 		}
@@ -327,30 +331,35 @@ main {
 
 footer {
 	width: 100%;
-	height: 200px;
 	background-color: #f5f5f5;
 
-	padding: 30px 100px;
+	padding: 30px 60px;
 
 	display: flex;
-	gap: 230px;
+	gap: 0px;
 
 	.logo {
+		width: 100%;
 		font-size: 20px;
 		color: $text-color;
+		display: flex;
+		gap: 8px;
+		align-items: flex-start;
 	}
 
 	.footer-container {
+		width: 100%;
 		display: flex;
+		overflow: hidden;
 		flex-direction: column;
 		gap: 3px;
-		margin-top: 20px;
+		padding-top: 20px;
+		margin-right: 100px;
 
 		h4 {
 			font-size: 16px;
 			font-weight: 700;
 			color: $text-color;
-			margin-bottom: 20px;
 		}
 
 		p,
@@ -375,6 +384,30 @@ aside {
 		padding: 15px 50px;
 		border-radius: 10px;
 		font-size: 16px;
+		font-weight: 700;
+	}
+}
+
+///////////////////////////////////////// SERVICES
+
+.services-hero {
+	width: 100%;
+	background-color: $bg-color;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	padding-top: 80px;
+
+	p {
+		font-size: 20px;
+		color: $text-color;
+	}
+
+	h1 {
+		font-size: 60px;
+		color: $text-color;
 		font-weight: 700;
 	}
 }
