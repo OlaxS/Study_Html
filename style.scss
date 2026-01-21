@@ -10,7 +10,7 @@ $text-color: #1a4e8d;
 	font-weight: 500;
 }
 
-///////////////////////////////////////// INDEX
+///////////////////////////////////////// INDEX.html
 
 // HEADER
 
@@ -40,17 +40,17 @@ header {
 		gap: 10px;
 		align-items: center;
 
-		.defaultlink {
+		.link {
 			border: none;
 			padding: 10px 25px;
 			border-radius: 40px;
 			transition: 0.3s;
-
-			&:hover {
-				border: 2px solid none;
-				background-color: $text-color;
-				color: white;
-			}
+		}
+		.link:hover,
+		.active {
+			border: 2px solid none;
+			background-color: $text-color;
+			color: white;
 		}
 		.loginlink {
 			display: flex;
@@ -331,7 +331,6 @@ main {
 
 footer {
 	width: 100%;
-	background-color: #f5f5f5;
 
 	padding: 30px 60px;
 
@@ -388,7 +387,7 @@ aside {
 	}
 }
 
-///////////////////////////////////////// SERVICES
+///////////////////////////////////////// SERVICES.html
 
 .services-hero {
 	width: 100%;
@@ -399,6 +398,7 @@ aside {
 	align-items: center;
 	gap: 15px;
 	padding-top: 80px;
+	padding-bottom: 50px;
 
 	p {
 		font-size: 20px;
@@ -409,5 +409,145 @@ aside {
 		font-size: 60px;
 		color: $text-color;
 		font-weight: 700;
+		padding-bottom: 70px;
+	}
+
+	.service-card-section {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.service-card {
+			width: 45%;
+			background: white;
+			display: flex;
+			flex-direction: column;
+			padding: 40px;
+			justify-content: center;
+			gap: 5px;
+
+			span {
+				font-size: 24px;
+				font-weight: 600;
+				color: $text-color;
+				margin-bottom: 30px;
+			}
+			p {
+				font-size: 18px;
+				color: #3a71b5;
+				margin-bottom: 5px;
+			}
+
+			a {
+				height: 40px;
+				width: 140px;
+				border-radius: 30px;
+				background-color: #1a4e8d;
+				color: white;
+				border: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
 	}
 }
+
+///////////////////////////////////////// ABOUT.html
+
+.about-hero {
+	width: 100%;
+	background-color: $bg-color;
+	color: $text-color;
+	padding: 80px 40px 20px 40px;
+
+	p {
+		font-size: 26px;
+		line-height: 1.6;
+	}
+
+	h1 {
+		font-size: 60px;
+		font-weight: 700;
+		padding-top: 20px;
+		padding-bottom: 90px;
+		width: 50%;
+	}
+
+	.our-story {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+
+		.text-container {
+			width: 45%;
+			line-height: 1.6;
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+			padding: 20px;
+
+			span {
+				font-size: 24px;
+			}
+			p {
+				font-size: 16px;
+				width: 75%;
+			}
+		}
+	}
+}
+
+.team-section {
+	width: 100%;
+	background-color: #1a4e8d;
+	color: white;
+	padding: 60px 20px;
+
+	.team-title {
+		font-size: 60px;
+		font-weight: 700;
+		display: flex;
+		justify-content: center;
+		padding-bottom: 30px;
+	}
+
+	.team-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		gap: 120px;
+		padding: 90px;
+
+		.image-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 15px;
+
+			.image-border {
+				width: 230px;
+				height: 230px;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+
+			p {
+				font-size: 22px;
+				font-weight: 600;
+			}
+			span {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+///////////////////////////////////////// CONTACT.html
