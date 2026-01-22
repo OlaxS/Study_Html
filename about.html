@@ -44,10 +44,23 @@
 					<i class="bi bi-person-circle"> </i><span> Log In</span></a
 				>
 			</nav>
-			<div class="burger-menu" id="burger-menu">
-				<div class="burger-line"></div>
-				<div class="burger-line"></div>
-				<div class="burger-line"></div>
+			<div class="burger-container">
+				<div class="burger-menu" id="burger-menu">
+					<div class="burger-line"></div>
+					<div class="burger-line"></div>
+					<div class="burger-line"></div>
+				</div>
+
+				<div class="opened-burger-menu" id="opened-burger-menu">
+					<div class="closing-button" id="closing-button""><span>X</span></div>
+					<a href="./index.html" class="default link">Home</a>
+					<a href="./services.html" class="default link">Services</a>
+					<a href="./about.html" class="active link">About</a>
+					<a href="./contact.html" class="default link">Contact</a>
+					<a href="" class="loginlink">
+						<i class="bi bi-person-circle"> </i><span> Log In</span></a
+					>
+				</div>
 			</div>
 		</header>
 
@@ -92,21 +105,21 @@
 			<div class="team-section">
 				<span class="team-title">Meet Team Ponto!</span>
 				<div class="team-container">
-					<div class="image-container">
+					<div class="image-container first-team">
 						<div class="image-border">
 							<img src="./img/first-team.jpg" alt="Not found first-team.jpg" />
 						</div>
 						<p>Laura Henderson</p>
 						<span>Dog Groomer</span>
 					</div>
-					<div class="image-container">
+					<div class="image-container second-team">
 						<div class="image-border">
 							<img src="./img/second-team.jpg" alt="Not found first-team.jpg" />
 						</div>
 						<p>Markus Rau</p>
 						<span>Dog Groomer</span>
 					</div>
-					<div class="image-container">
+					<div class="image-container third-team">
 						<div class="image-border">
 							<img src="./img/third-team.jpg" alt="Not found first-team.jpg" />
 						</div>
@@ -153,10 +166,28 @@
 				<a href="https://www.x.com/">Twitter</a>
 				<a href="https://www.youtube.com/">Youtube</a>
 			</section>
+
+			
 		</footer>
 
 		<aside>
-			<a href="" class="bot-chat">Let's Chat!</a>
+			<div class="bot-chat" id="bot-chat">Let's Chat!</div>
+			<div class="chat-container" id="chat-container">
+				<div class="chat-header">
+					<img src="./img/chat-icon.png" alt="Error icon">
+					<div class="icon-text-container">
+						<h3>Ponto Pet</h3>
+						<p>We'll reply as soon as we can</p>
+					</div>
+					<span class="close-chat" id="close-chat">X</span>
+				</div>
+				<div class="chat-body"></div>
+				<div class="chat-footer">
+					<textarea name="message-chatbox" placeholder="Type your message..." ></textarea>
+				</div>
+			</div>
 		</aside>
+
+		<script src="./script.js"></script>
 	</body>
 </html>
