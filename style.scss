@@ -64,6 +64,22 @@ header {
 			font-size: 28px;
 		}
 	}
+
+	.burger-menu {
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+		align-self: center;
+		width: 25px;
+		height: 20px;
+
+		.burger-line {
+			width: 100%;
+			height: 3px;
+			background-color: $text-color;
+			border-radius: 2px;
+		}
+	}
 }
 
 // MAIN
@@ -198,16 +214,17 @@ main {
 		.client-cards {
 			display: flex;
 			justify-content: space-evenly;
-			padding: 100px 160px;
+			padding: 100px 0px;
 
 			.client-card {
-				width: 300px;
-				height: 420px;
+				width: 20%;
+				height: auto;
 				background-color: white;
 				border-radius: 15px;
 				display: flex;
 				flex-direction: column;
 				padding: 40px 30px;
+				overflow: hidden;
 
 				.client-icon {
 					width: 90px;
@@ -230,6 +247,7 @@ main {
 				}
 
 				.client-name {
+					padding-top: 20px;
 					font-size: 17px;
 					font-weight: 800;
 					color: $text-color;
@@ -335,7 +353,6 @@ footer {
 	padding: 30px 60px;
 
 	display: flex;
-	gap: 0px;
 
 	.logo {
 		width: 100%;
@@ -349,7 +366,7 @@ footer {
 	.footer-container {
 		width: 100%;
 		display: flex;
-		overflow: hidden;
+		// overflow: hidden;
 		flex-direction: column;
 		gap: 3px;
 		padding-top: 20px;
@@ -427,6 +444,7 @@ aside {
 			padding: 40px;
 			justify-content: center;
 			gap: 5px;
+			overflow: hidden;
 
 			span {
 				font-size: 24px;
@@ -522,10 +540,10 @@ aside {
 	.team-container {
 		width: 100%;
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		gap: 120px;
 		padding: 90px;
-
+		flex-wrap: wrap;
 		.image-container {
 			display: flex;
 			flex-direction: column;
@@ -551,3 +569,151 @@ aside {
 }
 
 ///////////////////////////////////////// CONTACT.html
+
+//////////////////////////////////////// media
+
+@media screen and (min-width: 1200px) and (max-width: 1550px) {
+	main {
+		.clients-section {
+			.client-cards {
+				.client-card {
+					width: 23%;
+					.client-icon {
+						width: 70px;
+						height: 70px;
+					}
+					.client-review {
+						font-size: 17px;
+					}
+					.client-name {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+	header {
+		nav {
+			display: none;
+		}
+		.burger-menu {
+			display: flex;
+		}
+	}
+	main {
+		.home-hero {
+			.hero-image {
+				width: 80%;
+			}
+		}
+		.book-section {
+			.image-container {
+				.image-border {
+					width: 230px;
+					height: 160px;
+					.book-images {
+						object-fit: contain;
+					}
+				}
+			}
+		}
+		.clients-section {
+			.client-cards {
+				padding: 100px 120px;
+				gap: 20px;
+				.client-card {
+					width: auto;
+
+					.client-icon {
+						width: 50px;
+						height: 50px;
+					}
+					.client-review {
+						font-size: 14px;
+					}
+					.client-name {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		.about-hero {
+			.our-story {
+				flex-direction: column;
+				align-items: center;
+
+				.text-container {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	header {
+		nav {
+			display: none;
+		}
+		.burger-menu {
+			display: flex;
+		}
+	}
+	main {
+		.home-hero {
+			.hero-image {
+				width: 80%;
+			}
+		}
+		.book-section {
+			.text-container {
+				padding: 0px 20px;
+				overflow: hidden;
+			}
+
+			.image-container {
+				.image-border {
+					width: 230px;
+					height: 160px;
+					.book-images {
+						object-fit: contain;
+					}
+				}
+			}
+		}
+		.clients-section {
+			.client-cards {
+				padding: 100px 30px;
+				gap: 20px;
+				overflow: hidden;
+				.client-card {
+					width: 100%;
+					height: auto;
+					.client-icon {
+						width: 50px;
+						height: 50px;
+					}
+					.client-review {
+						font-size: 14px;
+					}
+					.client-name {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		.about-hero {
+			.our-story {
+				flex-direction: column;
+				align-items: center;
+
+				.text-container {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

@@ -54,6 +54,20 @@ header nav .loginlink:hover span {
 header nav .bi {
   font-size: 28px;
 }
+header .burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  width: 25px;
+  height: 20px;
+}
+header .burger-menu .burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #1a4e8d;
+  border-radius: 2px;
+}
 
 main {
   width: 100%;
@@ -171,16 +185,17 @@ main .clients-section h2 {
 main .clients-section .client-cards {
   display: flex;
   justify-content: space-evenly;
-  padding: 100px 160px;
+  padding: 100px 0px;
 }
 main .clients-section .client-cards .client-card {
-  width: 300px;
-  height: 420px;
+  width: 20%;
+  height: auto;
   background-color: white;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   padding: 40px 30px;
+  overflow: hidden;
 }
 main .clients-section .client-cards .client-card .client-icon {
   width: 90px;
@@ -200,6 +215,7 @@ main .clients-section .client-cards .client-card .client-review {
   flex-grow: 1;
 }
 main .clients-section .client-cards .client-card .client-name {
+  padding-top: 20px;
   font-size: 17px;
   font-weight: 800;
   color: #1a4e8d;
@@ -287,7 +303,6 @@ footer {
   width: 100%;
   padding: 30px 60px;
   display: flex;
-  gap: 0px;
 }
 footer .logo {
   width: 100%;
@@ -300,7 +315,6 @@ footer .logo {
 footer .footer-container {
   width: 100%;
   display: flex;
-  overflow: hidden;
   flex-direction: column;
   gap: 3px;
   padding-top: 20px;
@@ -368,6 +382,7 @@ aside .bot-chat {
   padding: 40px;
   justify-content: center;
   gap: 5px;
+  overflow: hidden;
 }
 .services-hero .service-card-section .service-card span {
   font-size: 24px;
@@ -450,9 +465,10 @@ aside .bot-chat {
 .team-section .team-container {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 120px;
   padding: 90px;
+  flex-wrap: wrap;
 }
 .team-section .team-container .image-container {
   display: flex;
@@ -472,4 +488,112 @@ aside .bot-chat {
 }
 .team-section .team-container .image-container span {
   font-size: 18px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1550px) {
+  main .clients-section .client-cards .client-card {
+    width: 23%;
+  }
+  main .clients-section .client-cards .client-card .client-icon {
+    width: 70px;
+    height: 70px;
+  }
+  main .clients-section .client-cards .client-card .client-review {
+    font-size: 17px;
+  }
+  main .clients-section .client-cards .client-card .client-name {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  header nav {
+    display: none;
+  }
+  header .burger-menu {
+    display: flex;
+  }
+  main .home-hero .hero-image {
+    width: 80%;
+  }
+  main .book-section .image-container .image-border {
+    width: 230px;
+    height: 160px;
+  }
+  main .book-section .image-container .image-border .book-images {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  main .clients-section .client-cards {
+    padding: 100px 120px;
+    gap: 20px;
+  }
+  main .clients-section .client-cards .client-card {
+    width: auto;
+  }
+  main .clients-section .client-cards .client-card .client-icon {
+    width: 50px;
+    height: 50px;
+  }
+  main .clients-section .client-cards .client-card .client-review {
+    font-size: 14px;
+  }
+  main .clients-section .client-cards .client-card .client-name {
+    font-size: 12px;
+  }
+  main .about-hero .our-story {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .about-hero .our-story .text-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  header nav {
+    display: none;
+  }
+  header .burger-menu {
+    display: flex;
+  }
+  main .home-hero .hero-image {
+    width: 80%;
+  }
+  main .book-section .text-container {
+    padding: 0px 20px;
+    overflow: hidden;
+  }
+  main .book-section .image-container .image-border {
+    width: 230px;
+    height: 160px;
+  }
+  main .book-section .image-container .image-border .book-images {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  main .clients-section .client-cards {
+    padding: 100px 30px;
+    gap: 20px;
+    overflow: hidden;
+  }
+  main .clients-section .client-cards .client-card {
+    width: 100%;
+    height: auto;
+  }
+  main .clients-section .client-cards .client-card .client-icon {
+    width: 50px;
+    height: 50px;
+  }
+  main .clients-section .client-cards .client-card .client-review {
+    font-size: 14px;
+  }
+  main .clients-section .client-cards .client-card .client-name {
+    font-size: 12px;
+  }
+  main .about-hero .our-story {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .about-hero .our-story .text-container {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
